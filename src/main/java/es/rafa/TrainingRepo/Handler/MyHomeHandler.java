@@ -26,10 +26,12 @@ public class MyHomeHandler implements HttpHandler {
 		} catch (IOException e) {
 			logger.error("Error while geting response", e);
 		} catch (InterruptedException e) {
+			logger.error("Error in the connection", e);
 		} catch (ExecutionException e) {
-			e.printStackTrace();
+			logger.error("Error while making the request", e);
 		}
 		exchange.sendResponseHeaders(200, response.length());
+
 		OutputStream os = exchange.getResponseBody();
 		os.write(response.getBytes());
 		os.close();
@@ -39,7 +41,7 @@ public class MyHomeHandler implements HttpHandler {
 		HttpClient client = HttpClient.newBuilder().version(Version.HTTP_2).build();
 
 		HttpRequest request = HttpRequest.newBuilder(URI.create("https://api.github.com/users")).GET().build();
-		
+
 		CompletableFuture<HttpResponse<String>> response = client.sendAsync(request,
 				HttpResponse.BodyHandlers.ofString());
 
