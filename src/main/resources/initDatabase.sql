@@ -1,0 +1,5 @@
+CREATE TABLE IF NOT EXISTS USERS(
+	id int PRIMARY KEY,
+	name VARCHAR(50),
+	avatar VARCHAR(255)	
+);
