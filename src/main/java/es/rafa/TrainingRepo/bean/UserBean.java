@@ -1,4 +1,4 @@
-package es.rafa.TrainingRepo.bean;
+package es.rafa.trainingRepo.bean;
 
 public class UserBean {
 	private String login;

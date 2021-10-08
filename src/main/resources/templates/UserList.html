@@ -1,0 +1,19 @@
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>UserList</title>
+</head>
+<body>
+	<table>
+		<th>ID</th>
+		<th>Login</th>
+		<th>Avatar</th>
+		<tr th:each="user: ${userList}">
+			<td th:text="${user.id}" />
+			<td th:text="${user.login}" />
+			<td><img width="60" th:src="${user.avatar_url}"></td>
+		</tr>
+	</table>
+</body>
+</html>
+

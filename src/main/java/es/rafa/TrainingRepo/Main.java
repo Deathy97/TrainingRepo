@@ -1,21 +1,11 @@
-package es.rafa.TrainingRepo;
+package es.rafa.trainingRepo;
 
-import java.io.IOException;
-import java.net.InetSocketAddress;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import com.sun.net.httpserver.HttpServer;
-
-import es.rafa.TrainingRepo.Handler.MyHomeHandler;
-import es.rafa.TrainingRepo.Handler.MyUsersHandler;
-
+@SpringBootApplication
 public class Main {
-
-	public static void main(String[] args) throws IOException {
-		System.out.println("Starting....");
-		HttpServer server = HttpServer.create(new InetSocketAddress(8000), 0);
-		server.createContext("/", new MyHomeHandler());
-		server.createContext("/getAllUsers", new MyUsersHandler());
-		server.setExecutor(null);
-		server.start();
+	public static void main(String[] args) {
+		SpringApplication.run(Main.class);
 	}
 }
