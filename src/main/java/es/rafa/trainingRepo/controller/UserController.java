@@ -13,6 +13,7 @@ public class UserController {
 	@Autowired
 	UserService userService;
 
+	//TODO: Add pagination
 	@GetMapping("/getAllUsers")
 	public String getAllUsers(Model model) {
 		model.addAttribute("userList", userService.getAllUsers());
@@ -21,6 +22,7 @@ public class UserController {
 
 	}
 
+	//TODO: Call this method from UserList.html
 	private void loadDataFromApi() {
 		userService.loadDataFromApi();
 	}
