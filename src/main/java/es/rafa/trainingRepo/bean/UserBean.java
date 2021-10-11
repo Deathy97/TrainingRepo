@@ -20,6 +20,7 @@ public class UserBean {
 	private String type;
 	private boolean site_admin;
 
+	
 	public String getLogin() {
 		return login;
 	}
