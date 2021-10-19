@@ -58,4 +58,14 @@ public class UserServiceImpl implements UserService {
 		userList.stream().forEach(user -> userRepo.insertUser(user));
 	}
 
+	@Override
+	public int getNumberOfPages() {
+		return userRepo.getNumberOfPages();
+	}
+
+	@Override
+	public List<UserBean> getPaginationUsers(int page) {
+		return userRepo.findPagination(page);
+	}
+
 }

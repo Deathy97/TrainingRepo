@@ -9,5 +9,9 @@ public interface UserService {
 	public List<UserBean> getAllUsers();
 
 	public void loadDataFromApi();
+	
+	public int getNumberOfPages();
+	
+	public List<UserBean> getPaginationUsers(int page);
 
 }
