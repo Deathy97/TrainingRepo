@@ -112,7 +112,6 @@ public class UserRepository {
 			ps = conn.prepareStatement(SQL_GET_NUMBER_OF_PAGES);
 			ps.setInt(1, PAGINATION_ROWS);
 			rs = ps.executeQuery();
-			System.out.println(ps);
 
 			if (rs.next()) {
 				numPages = rs.getInt(1);
