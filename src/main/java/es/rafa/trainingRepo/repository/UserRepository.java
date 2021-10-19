@@ -32,7 +32,7 @@ public class UserRepository {
 			ps = conn.prepareStatement(SQL_INSERT);
 
 			ps.setString(1, user.getLogin());
-			ps.setString(2, user.getAvatarUrl());
+			ps.setString(2, user.getAvatar_url());
 
 			ps.executeUpdate();
 

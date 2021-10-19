@@ -3,22 +3,22 @@ package es.rafa.trainingRepo.bean;
 public class UserBean {
 	private String login;
 	private int id;
-	private String nodeId;
-	private String avatarUrl;
-	private String gravatarId;
+	private String node_id;
+	private String avatar_url;
+	private String gravatar_id;
 	private String url;
-	private String htmlUrl;
-	private String followersUrl;
-	private String followingUrl;
-	private String gistsUrl;
-	private String starredUrl;
-	private String subscriptionsUrl;
-	private String organizationsUrl;
-	private String reposUrl;
-	private String eventsUrl;
-	private String receivedEventsUrl;
+	private String html_url;
+	private String followers_url;
+	private String following_url;
+	private String gists_url;
+	private String starred_url;
+	private String subscriptions_url;
+	private String organizations_url;
+	private String repos_url;
+	private String events_url;
+	private String received_events_url;
 	private String type;
-	private boolean siteAdmin;
+	private boolean site_admin;
 
 	
 	public String getLogin() {
@@ -37,28 +37,28 @@ public class UserBean {
 		this.id = id;
 	}
 
-	public String getNodeId() {
-		return nodeId;
+	public String getNode_id() {
+		return node_id;
 	}
 
-	public void setNodeId(String nodeId) {
-		this.nodeId = nodeId;
+	public void setNode_id(String node_id) {
+		this.node_id = node_id;
 	}
 
-	public String getAvatarUrl() {
-		return avatarUrl;
+	public String getAvatar_url() {
+		return avatar_url;
 	}
 
-	public void setAvatarUrl(String avatarUrl) {
-		this.avatarUrl = avatarUrl;
+	public void setAvatar_url(String avatar_url) {
+		this.avatar_url = avatar_url;
 	}
 
-	public String getGravatarId() {
-		return gravatarId;
+	public String getGravatar_id() {
+		return gravatar_id;
 	}
 
-	public void setGravatarId(String gravatarId) {
-		this.gravatarId = gravatarId;
+	public void setGravatar_id(String gravatar_id) {
+		this.gravatar_id = gravatar_id;
 	}
 
 	public String getUrl() {
@@ -69,84 +69,84 @@ public class UserBean {
 		this.url = url;
 	}
 
-	public String getHtmlUrl() {
-		return htmlUrl;
+	public String getHtml_url() {
+		return html_url;
 	}
 
-	public void setHtmlUrl(String htmlUrl) {
-		this.htmlUrl = htmlUrl;
+	public void setHtml_url(String html_url) {
+		this.html_url = html_url;
 	}
 
-	public String getFollowersUrl() {
-		return followersUrl;
+	public String getFollowers_url() {
+		return followers_url;
 	}
 
-	public void setFollowersUrl(String followersUrl) {
-		this.followersUrl = followersUrl;
+	public void setFollowers_url(String followers_url) {
+		this.followers_url = followers_url;
 	}
 
-	public String getFollowingUrl() {
-		return followingUrl;
+	public String getFollowing_url() {
+		return following_url;
 	}
 
-	public void setFollowingUrl(String followingUrl) {
-		this.followingUrl = followingUrl;
+	public void setFollowing_url(String following_url) {
+		this.following_url = following_url;
 	}
 
-	public String getGistsUrl() {
-		return gistsUrl;
+	public String getGists_url() {
+		return gists_url;
 	}
 
-	public void setGistsUrl(String gistsUrl) {
-		this.gistsUrl = gistsUrl;
+	public void setGists_url(String gists_url) {
+		this.gists_url = gists_url;
 	}
 
-	public String getStarredUrl() {
-		return starredUrl;
+	public String getStarred_url() {
+		return starred_url;
 	}
 
-	public void setStarred_url(String starredUrl) {
-		this.starredUrl = starredUrl;
+	public void setStarred_url(String starred_url) {
+		this.starred_url = starred_url;
 	}
 
-	public String getSubscriptionsUrl() {
-		return subscriptionsUrl;
+	public String getSubscriptions_url() {
+		return subscriptions_url;
 	}
 
-	public void setSubscriptionsUrl(String subscriptionsUrl) {
-		this.subscriptionsUrl = subscriptionsUrl;
+	public void setSubscriptions_url(String subscriptions_url) {
+		this.subscriptions_url = subscriptions_url;
 	}
 
-	public String getOrganizationsUrl() {
-		return organizationsUrl;
+	public String getOrganizations_url() {
+		return organizations_url;
 	}
 
-	public void setOrganizationsUrl(String organizationsUrl) {
-		this.organizationsUrl = organizationsUrl;
+	public void setOrganizations_url(String organizations_url) {
+		this.organizations_url = organizations_url;
 	}
 
-	public String getReposUrl() {
-		return reposUrl;
+	public String getRepos_url() {
+		return repos_url;
 	}
 
-	public void setRepos_url(String reposUrl) {
-		this.reposUrl = reposUrl;
+	public void setRepos_url(String repos_url) {
+		this.repos_url = repos_url;
 	}
 
-	public String getEventsUrl() {
-		return eventsUrl;
+	public String getEvents_url() {
+		return events_url;
 	}
 
-	public void setEventsUrl(String eventsUrl) {
-		this.eventsUrl = eventsUrl;
+	public void setEvents_url(String events_url) {
+		this.events_url = events_url;
 	}
 
-	public String getReceivedEventsUrl() {
-		return receivedEventsUrl;
+	public String getReceived_events_url() {
+		return received_events_url;
 	}
 
-	public void setReceivedEventsUrl(String receivedEventsUrl) {
-		this.receivedEventsUrl = receivedEventsUrl;
+	public void setReceived_events_url(String received_events_url) {
+		this.received_events_url = received_events_url;
 	}
 
 	public String getType() {
@@ -157,12 +157,12 @@ public class UserBean {
 		this.type = type;
 	}
 
-	public boolean isSiteAdmin() {
-		return siteAdmin;
+	public boolean isSite_admin() {
+		return site_admin;
 	}
 
-	public void setSiteAdmin(boolean siteAdmin) {
-		this.siteAdmin = siteAdmin;
+	public void setSite_admin(boolean site_admin) {
+		this.site_admin = site_admin;
 	}
 
 }

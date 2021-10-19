@@ -29,7 +29,16 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public List<UserBean> getAllUsers() {
-		return userRepo.findAll();
+
+		List<UserBean> userList = new ArrayList<>();
+		userList = userRepo.findAll();
+
+		if (userList.isEmpty()) {
+			loadDataFromApi();
+			userList = userRepo.findAll();
+		}
+
+		return userList;
 	}
 
 	@Override

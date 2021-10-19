@@ -8,7 +8,7 @@ public class UserMapper {
 		UserBean user = new UserBean();
 		user.setId(id);
 		user.setLogin(name);
-		user.setAvatarUrl(avatar);
+		user.setAvatar_url(avatar);
 
 		return user;
 

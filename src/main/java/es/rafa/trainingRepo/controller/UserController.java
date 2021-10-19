@@ -22,9 +22,4 @@ public class UserController {
 
 	}
 
-	//TODO: Call this method from UserList.html
-	private void loadDataFromApi() {
-		userService.loadDataFromApi();
-	}
-
 }
