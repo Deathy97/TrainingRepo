@@ -2,4 +2,4 @@
 .settings/
 .project
 .classpath
-/src/resources/*.db
+/src/main/resources/*.db
