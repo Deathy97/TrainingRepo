@@ -18,12 +18,12 @@ public class UserController {
 	public String getAllUsers(Model model) {
 		model.addAttribute("userList", userService.getAllUsers());
 
-		return "UserList";
+		return "Hola";
 
 	}
-	
+
 	@GetMapping("/getAllUsers")
-	public String getAllUsers( @RequestParam(defaultValue = "0") Integer pageNo, Model model) {
+	public String getAllUsers(@RequestParam(defaultValue = "0") Integer pageNo, Model model) {
 		model.addAttribute("userList", userService.getPaginationUsers(pageNo));
 		model.addAttribute("numPages", userService.getNumberOfPages());
 
