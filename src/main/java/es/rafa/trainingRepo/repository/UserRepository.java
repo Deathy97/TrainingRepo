@@ -24,10 +24,14 @@ public class UserRepository {
 
 	private final String SQL_INSERT = "INSERT INTO USERS (NAME, AVATAR) VALUES (?, ?)";
 	private final String SQL_FIND_ALL = "SELECT * FROM USERS";
-
-	private final int PAGINATION_ROWS = 5;
 	private final String SQL_GET_NUMBER_OF_PAGES = "SELECT COUNT(1)/ ? AS NUMROWS FROM USERS";
 	private final String SQL_GET_PAGINATION_USERS = "SELECT * FROM USERS LIMIT ? OFFSET ?*?";
+
+	private static final String COLUMN_AVATAR = "AVATAR";
+	private static final String COLUMN_NAME = "NAME";
+	private static final String COLUMN_ID = "ID";
+
+	private final int PAGINATION_ROWS = 5;
 
 	public void insertUser(UserBean user) {
 		Connection conn = manager.openConnection();
@@ -36,7 +40,7 @@ public class UserRepository {
 			ps = conn.prepareStatement(SQL_INSERT);
 
 			ps.setString(1, user.getLogin());
-			ps.setString(2, user.getAvatar_url());
+			ps.setString(2, user.getAvatarUrl());
 
 			ps.executeUpdate();
 
@@ -60,7 +64,8 @@ public class UserRepository {
 			rs = ps.executeQuery();
 
 			while (rs.next()) {
-				userList.add(usermapper.toBean(rs.getInt("id"), rs.getString("NAME"), rs.getString("AVATAR")));
+				userList.add(usermapper.toBean(rs.getInt(COLUMN_ID), rs.getString(COLUMN_NAME),
+						rs.getString(COLUMN_AVATAR)));
 			}
 
 		} catch (SQLException e) {
@@ -88,7 +93,8 @@ public class UserRepository {
 			rs = ps.executeQuery();
 
 			while (rs.next()) {
-				userList.add(usermapper.toBean(rs.getInt("id"), rs.getString("NAME"), rs.getString("AVATAR")));
+				userList.add(usermapper.toBean(rs.getInt(COLUMN_ID), rs.getString(COLUMN_NAME),
+						rs.getString(COLUMN_AVATAR)));
 			}
 
 		} catch (SQLException e) {
@@ -118,7 +124,7 @@ public class UserRepository {
 			}
 
 		} catch (SQLException e) {
-			e.printStackTrace();
+			throw new DatabaseException("Error getNumberOfPages", e);
 		} finally {
 			manager.close(rs);
 			manager.close(ps);

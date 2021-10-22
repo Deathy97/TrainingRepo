@@ -14,16 +14,16 @@ public class UserController {
 	@Autowired
 	UserService userService;
 
-	@GetMapping("/getAllUsers1")
-	public String getAllUsers(Model model) {
-		model.addAttribute("userList", userService.getAllUsers());
+	@GetMapping("/getAllUsers")
+	public String getAllUsers() {
+		userService.loadDataFromApi();
 
-		return "Hola";
+		return "redirect:/";
 
 	}
 
-	@GetMapping("/getAllUsers")
-	public String getAllUsers(@RequestParam(defaultValue = "0") Integer pageNo, Model model) {
+	@GetMapping("/")
+	public String getPaginationUsers(@RequestParam(defaultValue = "0") Integer pageNo, Model model) {
 		model.addAttribute("userList", userService.getPaginationUsers(pageNo));
 		model.addAttribute("numPages", userService.getNumberOfPages());
 

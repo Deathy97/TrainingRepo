@@ -28,20 +28,6 @@ public class UserServiceImpl implements UserService {
 	Utils utils;
 
 	@Override
-	public List<UserBean> getAllUsers() {
-
-		List<UserBean> userList = new ArrayList<>();
-		userList = userRepo.findAll();
-
-		if (userList.isEmpty()) {
-			loadDataFromApi();
-			userList = userRepo.findAll();
-		}
-
-		return userList;
-	}
-
-	@Override
 	public void loadDataFromApi() {
 		CompletableFuture<HttpResponse<String>> response = utils.doGetRequest(URL);
 
